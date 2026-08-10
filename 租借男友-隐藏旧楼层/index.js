@@ -1,0 +1,2 @@
+function e(){const e=$('.TH-render');console.info(`[隐藏旧楼层] 扫描到 ${e.length} 个 .TH-render 容器`),e.length<=1||(e.hide(),e.last().show(),console.info(`[隐藏旧楼层] 已隐藏 ${e.length-1} 个旧前端，保留最新楼层`))}function n(){console.info('[隐藏旧楼层] 初始化中...'),toastr.success('隐藏旧楼层脚本已加载','租借男友'),e(),eventOn(iframe_events.MESSAGE_IFRAME_RENDER_ENDED,n=>{console.info(`[隐藏旧楼层] iframe 渲染完成: ${n}`),e()})}$(()=>{errorCatched(n)()}),$(window).on('pagehide',()=>{$('.TH-render').show(),console.info('[隐藏旧楼层] 脚本已卸载，已恢复所有前端显示')});
+//# sourceMappingURL=index.js.map
